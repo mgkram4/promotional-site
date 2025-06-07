@@ -54,12 +54,14 @@ export const PhoneSection: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 rounded-[3rem] p-3 shadow-2xl">
                 <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <p className="text-xl font-semibold mb-2">Your Video Here</p>
-                      <p className="text-sm opacity-80">Add your bio scan demo video</p>
-                    </div>
-                  </div>
+                  <video
+                    src="/demo.mov"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
