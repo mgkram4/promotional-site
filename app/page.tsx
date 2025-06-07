@@ -3,11 +3,6 @@ import React from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ApiUsageSection } from './components/api-usage';
 import { SignUpSection } from './components/cta';
-import {
-  APISection,
-  ProductsSection,
-  ResultsSection,
-} from './components/features';
 import { Footer } from './components/footer';
 import { HeroSection } from './components/header';
 import { FeaturesSection, PhoneSection } from './components/middle';
@@ -23,9 +18,6 @@ const App: React.FC = () => {
         <PhoneSection />
         <FeaturesSection />
         <ApiUsageSection />
-        <ProductsSection />
-        <APISection />
-        <ResultsSection />
         <SignUpSection />
         <Footer />
       </div>
