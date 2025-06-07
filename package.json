@@ -21,7 +21,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/prismjs": "^1.26.4",
-    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.13",
     "tailwindcss": "^4",

@@ -10,21 +10,20 @@ import React, { useEffect, useRef, useState } from 'react';
 export const ApiUsageSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
-    if (isInView) {
-      Prism.highlightAll();
-    }
-  }, [isInView]);
-  
+    setIsClient(true);
+  }, []);
+
   useEffect(() => {
-    if (isExpanded) {
+    if (isClient) {
       Prism.highlightAll();
     }
-  }, [isExpanded]);
+  }, [isClient, isExpanded, isInView]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(code.trim());
@@ -152,9 +151,15 @@ if __name__ == "__main__":
               <div className="w-20"></div> {/* Spacer */}
             </div>
             <div className={`relative p-4 transition-all duration-300 ${isExpanded ? '' : 'max-h-96 overflow-y-auto'}`}>
-              <pre className="language-python !bg-transparent !p-0">
-                <code className="language-python">{code}</code>
-              </pre>
+              {isClient ? (
+                <pre className="language-python !bg-transparent !p-0">
+                  <code className="language-python">{code}</code>
+                </pre>
+              ) : (
+                <pre className="!bg-transparent !p-0">
+                  <code>{code}</code>
+                </pre>
+              )}
               <button
                 onClick={handleCopy}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-sm bg-slate-700/50 hover:bg-slate-700 rounded-md px-3 py-1"
