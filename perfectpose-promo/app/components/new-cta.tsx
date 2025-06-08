@@ -37,7 +37,7 @@ export const NewSignUpSection: React.FC = () => {
             Be the first to experience the future of fitness. Join our waitlist to get exclusive updates and be notified when we launch.
           </p>
           <div className="flex justify-center lg:justify-start">
-            <img src="/waitlist-human.png" alt="Join the waitlist" className="w-2/3"/>
+            <img src="/cta.png" alt="Join the waitlist" className="w-2/3"/>
           </div>
         </motion.div>
 

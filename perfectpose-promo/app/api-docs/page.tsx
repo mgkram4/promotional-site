@@ -98,8 +98,8 @@ const APIDocsPage = () => {
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6 pt-4">
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-white/10 flex gap-4 items-center"><FiZap className="w-8 h-8 text-blue-400" /><div><h4 className="font-bold text-white">Local First</h4><p className="text-sm">Incredibly fast and private. No cloud dependency.</p></div></div>
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-white/10 flex gap-4 items-center"><FiTerminal className="w-8 h-8 text-green-400" /><div><h4 className="font-bold text-white">RESTful</h4><p className="text-sm">Standard HTTP methods and status codes.</p></div></div>
+                  <div className="bg-gray-900/50 p-6 rounded-xl border border-white/10 flex gap-4 items-center"><div className="w-8 h-8 text-blue-400"><FiZap size="100%" /></div><div><h4 className="font-bold text-white">Local First</h4><p className="text-sm">Incredibly fast and private. No cloud dependency.</p></div></div>
+                  <div className="bg-gray-900/50 p-6 rounded-xl border border-white/10 flex gap-4 items-center"><div className="w-8 h-8 text-green-400"><FiTerminal size="100%" /></div><div><h4 className="font-bold text-white">RESTful</h4><p className="text-sm">Standard HTTP methods and status codes.</p></div></div>
               </div>
             </div>
 

@@ -68,9 +68,8 @@ const FeatureCard: React.FC<Feature & { index: number }> = ({ icon: Icon, iconCl
         >
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-                <div className="mb-4 text-white">
-                    {/* @ts-expect-error - IconType does not have a className prop */}
-                    <Icon className={iconClassName} />
+                <div className={`mb-4 ${iconClassName}`}>
+                    <Icon size="100%" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3 text-white">{title}</h3>
                 <p className="text-gray-400">{description}</p>
@@ -106,7 +105,7 @@ export const BentoFeatures: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/human-vector.png" alt="Fitness analysis" className="w-full h-full object-contain"/>
+            <img src="/mid.png" alt="Fitness analysis" className="w-full h-full object-contain"/>
           </motion.div>
         </div>
       </div>
