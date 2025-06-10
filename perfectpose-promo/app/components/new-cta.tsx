@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const NewSignUpSection: React.FC = () => {
@@ -37,7 +38,7 @@ export const NewSignUpSection: React.FC = () => {
             Be the first to experience the future of fitness. Join our waitlist to get exclusive updates and be notified when we launch.
           </p>
           <div className="flex justify-center lg:justify-start">
-            <img src="/cta.png" alt="Join the waitlist" className="w-2/3"/>
+            <Image src="/cta.png" alt="Join the waitlist" width={400} height={300} className="w-2/3"/>
           </div>
         </motion.div>
 
